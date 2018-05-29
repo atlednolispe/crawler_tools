@@ -6,6 +6,7 @@ ubuntu1804 配置headless Chrome环境
 ## 下载chrome和chromedriver
 
 [chrome](https://www.google.com/chrome/)
+
 [chromedriver](http://chromedriver.chromium.org/)
 
 ```
