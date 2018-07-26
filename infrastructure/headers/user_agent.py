@@ -266,5 +266,5 @@ class UserAgent:
 
 if __name__ == '__main__':
     ua = UserAgent()
-    headers = ua.common_android()
+    headers = getattr(ua, 'common_android')
     print(headers)
