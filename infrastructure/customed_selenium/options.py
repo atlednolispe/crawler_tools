@@ -49,7 +49,7 @@ def generate_chrome_options(
             options.add_extension(proxyauth_plugin_path)
         else:
             argument_proxy = "--proxy-server={}://{}:{}".format(
-                proxy['scheme'], proxy['ip'], proxy['port']
+                proxy['protocol'], proxy['ip'], proxy['port']
             )
             options.add_argument(argument_proxy)
     return options
