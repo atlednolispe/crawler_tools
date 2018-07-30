@@ -12,10 +12,16 @@ from headers import UserAgent
 
 
 def generate_chrome_options(
-    image=False, js=True, *, headers='common_android', proxy=None,
-    extension_path=None,
+    image=False, js=True, *, headless=True, headers='common_android', proxy=None,
+    extension_path=None, gpu=False
 ):
     options = ChromeOptions()
+
+    if headless:
+        options.headless = True
+
+    if not gpu:
+        options.add_argument('--disable-gpu')
 
     ua = UserAgent()
     current_headers = getattr(ua, headers)()
